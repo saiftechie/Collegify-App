@@ -1,0 +1,627 @@
+body{
+    /* background-image: url(/img/back.png); */
+    background-color: white;
+    background-attachment: fixed;
+    margin: 70px 0px 70px 0px;
+    overflow-x: hidden;
+}
+
+body.darkMode{
+    background-color: rgb(37, 37, 37);
+    background-attachment: fixed;
+    margin: 70px 0px 70px 0px;
+}
+
+
+.container{
+    max-width: 100%;
+}
+
+.title-card{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 70px;
+    line-height: 75px;
+    box-shadow: none;
+    z-index: 300;
+}
+
+.title-card.darkMode{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.menu, .backBtn{
+    font-size: x-large;
+}
+
+.ion-navicon-round, .ion-arrow-left-c{
+    color: #3d90e3;
+    margin: 15px;
+}
+
+.app-title{
+    color: #3d90e3;
+    font-size: x-large;
+    margin-left: 10px;
+    font-family: Aclonica;
+}
+
+.ion-android-more-vertical{
+    color: #3d90e3;
+}
+
+.addBtn{
+    margin: 0px 20px;
+}
+
+.ion-plus-round{
+    color: #3d90e3;
+}
+
+.broadcastBtn{
+    margin: 0px 20px;
+}
+
+.ion-speakerphone{
+    color: #3d90e3;
+}
+
+.input-field span.prefix.active, label.active{
+    color:  #3d90e3 !important;
+}
+
+input:focus{
+    border-bottom: 1px solid  #3d90e3 !important;
+    box-shadow: none !important;
+}
+
+.btn{
+    background-color: #3d90e3;
+}
+
+.btn:hover, .btn:focus{
+    background-color: #3d90e3 !important;
+}
+
+.btn.glimpsebtn:hover, .btn.glimpsebtn:focus{
+    background-color: white !important;
+    border: 2px solid #3d90e3;
+}
+
+.btn.glimpsebtn:focus i, .btn.glimpsebtn:hover i{
+    color: #3d90e3 !important;
+}
+
+.dots{
+    font-size: x-large;
+    margin-right: 10px;
+}
+
+.dropdown-content{
+    height: max-content !important;
+    width: max-content !important;
+}
+
+.dropdown-content.darkMode{
+    background-color: rgb(37, 37, 37);
+    border: 1px solid #3d90e3;
+}
+
+.dropdown-content li>a>i {
+    margin: 0px;
+    color: #3d90e3;
+}
+
+.dropdown-content li>a {
+    color: #3d90e3;
+}
+
+
+
+.sidenav{
+    width: 280px;
+}
+
+.user-view{
+    background-image: url('/img/sidenav.jpg');
+    background-position: center;
+    background-size: cover;
+    text-align: -webkit-center;
+    cursor: pointer;
+}
+
+.user-view.darkMode{
+    background-image: none;
+    background-color: rgb(37, 37, 37);
+    opacity: 0.8;
+    color: white;
+}
+
+.sidenav .user-view .circle {
+    height: 100px;
+    width: 100px;
+    border: solid white;
+}
+
+.sidenav .sideMenu li a, .sidenav .sideMenu li a i{
+    color: #3d90e3;
+}
+
+.sidenav.darkMode{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.sidenav .sideMenu li a:focus{
+    background-color: lightgray;
+}
+
+.divider.darkMode{
+    background-color: #3d90e3;
+}
+
+.appContent{
+    display: none;
+}
+
+.appContent.active{
+    display: block;
+}
+
+
+/* .descText{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: justify;
+   -webkit-line-clamp: 8;
+   -webkit-box-orient: vertical;
+} */
+
+.card .card-action a{
+    color: #3d90e3 !important;
+}
+
+.card .card-title {
+    font-size: 15px;
+}
+
+.card .card-title.activator{
+    display: inline;
+    position: absolute;
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.activateIcon i{
+    display: inline;
+    color: grey;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* .card .card-reveal{
+    overflow-y: hidden;
+} */
+
+/* .card .card-title i{
+    
+} */
+
+.ion-android-close{
+    top: 0;
+    position: absolute;
+    right: 0;
+    margin: 15px;
+}
+
+.ion-arrow-right-a{
+    color: gray;
+}
+
+.cardUserDetails{
+    display: inline-flex;
+    margin: 5px 15px;
+    height: 40px;
+    width: -webkit-fill-available;
+    overflow: hidden;
+}
+
+.userImg{
+    height: 40px;
+    width: 40px;
+}
+
+.userDetails{
+    margin: 2px 10px;
+    overflow: hidden;
+    width: -webkit-fill-available;
+
+}
+
+.userDetails .userName{
+    font-size: small;
+    font-weight: 400;
+}
+
+.userDetails .userCollege{
+    font-size: smaller;
+    font-weight: lighter;
+    display: inline;
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-action a{
+    font-size: smaller !important;
+}
+
+.cardMenu{
+    font-size: large;
+    margin: 7px 7px;
+}
+
+
+.date{
+    margin-left: 5px;
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+.card.small .card-image, .card.medium .card-image, .card.large .card-image {
+    max-height: 55%;
+}
+
+.card .card-content {
+    padding: 12px 20px;
+}
+
+.card .card-action {
+    padding: 5px 24px;
+}
+
+.card-tabbar{
+    position: fixed;
+    margin: 0px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 53px;
+    box-shadow: 0px 0px 5px 0px #d1d1d1;
+    z-index: 300;
+}
+
+.card-tabbar.darkMode{
+    background-color: rgb(37, 37, 37);
+}
+
+
+.card-tabbar ul>li>a>i.icon{
+    font-size: xx-large;
+}
+
+ul>li>a.active{
+    font-size: xx-large;
+    color: #3d90e3;
+}
+
+
+.card-tabbar>.row{
+    margin-bottom: 0px;
+}
+
+.card-tabbar>.row>.col{
+    padding: 0px;
+}
+
+
+.tab-btn{
+    display: inline-block !important;
+    position: fixed;
+    background-color: #3d90e3;
+    margin: -30px;
+    height: 60px !important;
+    width: 60px !important;
+    border-radius: 30px;
+    padding: 12px 0px;
+    box-shadow: 0px 10px 20px 0px #d1d1d1d1;
+}
+
+.tabs .indicator{
+    all: unset;
+}
+
+.tabs{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.tabs.darkMode{
+    background-color: rgb(37, 37, 37);
+}
+
+
+.tabs .tab a{
+    all:unset;
+    color: gray;
+    font-size: 20px;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    all: unset;
+    color:#3d90e3;
+    font-size: 20px;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    all: unset;
+    outline: none;
+    font-size: 20px;
+    color:#3d90e3;
+}
+
+.atext{
+    margin: -34px;
+    font-size: 10px;
+}
+
+.ion-paper-airplane{
+    font-size: 30px !important;
+    color: white !important;
+}
+
+
+#profileContent, #aboutContent, #settingsContent{
+    color: #3d90e3;
+}
+
+.ckbx-style-11 label{
+    font-size: 0.7em;
+}
+
+table{
+    border-collapse: unset;
+}
+
+.empty img{
+    width: 100px;
+}
+
+.emptyText{
+    color: #3d90e3;
+}
+
+.detailsView.darkMode{
+    color: #3d90e3;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.aboutImage{
+    width: 150px;
+    height: 150px !important;
+}
+
+#selectFile{
+    display: none;
+    visibility:hidden;
+}
+
+#output_image
+{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border: 2px solid #3d90e3;
+  
+}
+
+button.ion-edit{
+    color: white;
+}
+
+.editImage{
+    position: relative;
+    background-color: #3d90e3;
+    display: block;
+    height: 23px;
+    border-radius: 50%;
+    margin: 0px 0px -30px 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.editImage:hover, .editImage:focus{
+    background-color: #3d90e3;
+}
+
+.ion-upload{
+    font-size: 1.6rem !important;
+}
+
+.ion-android-cancel{
+    font-size: 1.6rem !important;
+}
+
+.uploadBtn{
+    margin-right: 5px;
+}
+
+.uploadView{
+    display: block;
+    text-align: -webkit-center;
+}
+
+.progress{
+    height: 5px;
+    background-color: #9dceff;
+}
+
+.determinate{
+    background-color: #3d90e3 !important;
+}
+
+.progressView{
+    color: green;
+    text-align: center;
+}
+
+.progressValue{
+    color: #3d90e3;
+}
+
+#modal-sem{
+    overflow: visible;
+}
+
+.modalBtn{
+    background-color: #3d90e3;
+    border-radius: 20px;
+}
+
+.filtered{
+    display: none !important;
+}
+
+/* card details */
+.etitle{
+    font-size: large;
+    font-weight: 500;
+}
+
+.eposter{
+    width: 100%;
+    height: auto;
+}
+
+.ebtn{
+    text-align: right;
+}
+
+.loader{
+    position: absolute;
+    top: 50%;
+}
+
+.file-field .btn{
+    float: right;
+}
+
+.file-field .file-path-wrapper {
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+.cke_chrome {
+    margin: 0px 0px 22px 0px !important;
+}
+
+.detailsView ul, .descText ul{
+    padding-left: 35px;
+    list-style-type: disc !important;
+}
+
+.detailsView ul>li, .descText ul>li{
+    list-style-type: disc !important;
+
+}
+
+.detailsView table{
+    border-color: #3d90e3;
+}
+
+.loader{
+    position: fixed;
+}
+
+/* -- Broadcast Card -- */
+
+.broadCard{
+    border-radius: 10px;
+}
+
+.broadCard .username{
+    margin: 5px;
+    color: #3d90e3;
+}
+
+.broadCard .message{
+    margin: 5px;
+    text-align: justify;
+}
+
+.broadCard .time{
+    margin: 5px;
+    font-size: smaller;
+    font-weight: 200;
+}
+
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom-color: #3d90e3;
+}
+
+/*  */
+
+.ckbx-style-11 label:before {
+    background: lightgray;
+}
+
+.ckbx-style-11 label:after {
+    background: grey;
+}
+
+.ckbx-style-11 input[type=checkbox]:checked+label:before {
+    background: #3d90e3;
+}
+
+.ckbx-style-11 input[type=checkbox]:checked+label:after {
+    background: #3d90e3;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.slide-in-top{animation:slide-in-top .3s cubic-bezier(.25,.46,.45,.94) both}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-4-1 22:42:22
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+ @keyframes slide-in-top{0%{transform:translateY(-1000px);opacity:0}100%{transform:translateY(0);opacity:1}}

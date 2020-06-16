@@ -1,0 +1,49 @@
+.bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 4px;
+    display: block;
+    background: #ecf0f1;
+    transition: 1s all ease-out;
+    animation-name: linear-bg;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.bar.pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.bar.round {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+.bar.square{
+    width: 150px;
+    height: 150px;
+}
+
+.bar.rectangle{
+    width: 100%;
+    height: 200px;
+}
+
+.bar.cardImage{
+    /* width: 150px; */
+    height: 150px;
+}
+
+
+@keyframes linear-bg {
+    from {
+        background: #ecf0f1;
+   }
+    100% {
+        background: #ddd;
+   }
+}

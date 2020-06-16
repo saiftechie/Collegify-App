@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+      <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/loadingio/ldbutton@v1.0.1/dist/ldbtn.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.min.css">
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="/fontAwesome/css/all.css">
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <link rel="manifest" href="/manifest.json">
+      <!-- ios support -->
+      <link rel="apple-touch-icon" href="/img/icons/icon-128x128.png">
+      <meta name="apple-mobile-web-app-status-bar" content="#3d90e3">
+      <meta name="theme-color" content="#3d90e3">
+      <title>Collegify</title>
+    </head>
+  <body>
+
+      <div class="container vertical-center center" id="loader">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container vertical-center fade-in card auth-card login-div hide" id="loginCard">
+        <div class="card-title center">
+          <span><h3>Login</h3></span>
+        </div>
+        <div class="row">
+          <div class="col s2"></div>
+          <div class="col s8">
+            <form class="loginForm" style="margin: 50px auto;">
+                <div class="input-field">
+                  <span class="icon ion-email prefix"></span>
+                  <input id="lg-email" type="email" required>
+                  <label for="lg-email">Email</label>
+                </div>
+                <div class="input-field">
+                  <span class="icon ion-locked prefix"></span>
+                  <input id="lg-password" type="password" required>
+                  <span class="icon ion-eye pass-icon toggle-password" toggle="#lg-password"></span>
+                  <label for="lg-password">Password</label>
+                </div>
+                <div class="input-field center ld-ext-right">
+                  <button type="submit" style="width: 50%;" class="waves-effect waves-light btn login-btn">Login&nbsp;<div class="login ld ld-ring ld-spin hide"></div></button>
+                </div>
+                <div class="input-field tbLogin center">
+                  <span><a class="modal-trigger" href="#modal-forgot-password">forgot password?</a></span>
+                </div>
+            </form>
+
+            <div class="input-field reglink center">
+              <span>Don't have an account?<a href="#"> Create</a></span>
+            </div>
+          </div>
+          <div class="col s2"></div>
+        </div>
+      </div>
+
+      <div id="modal-forgot-password" class="modal">
+        <div class="modal-content">
+            <span style="font-size: large;">Reset Password</span><span><a class="modal-close" href="#"><i class="right ion-android-close"></i></a></span>
+            <form class="forgotPassword">
+                <div class="input-field">
+                    <span class="icon ion-email prefix"></span>
+                    <input id="reset-Email" placeholder="Enter registered email" type="email" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" style="width:50% !important" class="btn modalBtn resetPasswordBtn">reset</button>
+                    <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+      <div class="container card fade-in auth-card register-div hide" id="regCard">
+        <div class="card-title center">
+            <span><h3>Register</h3></span>
+        </div>
+        <div class="row">
+            <div class="col s2"></div>
+            <div class="col s8">
+                <form class="regForm" style="margin: 20px auto;">
+                    <div class="input-field">
+                        <span class="icon ion-person prefix"></span>
+                        <input id="rg-fullName" type="text" required>
+                        <label for="rg-fullName">Full Name</label>
+                    </div>
+                    <div class="input-field">
+                        <span class="icon ion-email prefix"></span>
+                        <input id="rg-email" type="email"  required>
+                        <label for="rg-email">Email</label>
+                    </div>
+                    <div class="input-field">
+                      <span class="icon ion-android-call prefix"></span>
+                      <input id="rg-mobileNo" type="tel" pattern="^\d{10}$" oninvalid="this.setCustomValidity('Please input 10-digit mobile number!')" oninput="this.setCustomValidity('')" required>
+                      <label for="rg-mobileNo">Mobile No.</label>
+                    </div>
+                    <div class="input-field">
+                      <span class="icon ion-university prefix"></span>
+                      <input id="rg-college" type="text" required>
+                      <label for="rg-college">College Name</label>
+                  </div>
+                    <div class="input-field">
+                        <span class="icon ion-person-stalker prefix"></span>
+                        <select id="rg-role" required>
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="club">Event Club</option>
+                            <option value="tpo">TPO</option>
+                            <option value="student">Student</option>
+                        </select>
+                        <label>Role</label>
+                    </div>
+                    <div class="input-field semSelector hide">
+                        <span class="icon ion-ribbon-b prefix"></span>
+                        <select id="rg-semester">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="1">1st Sem.</option>
+                            <option value="2">2nd Sem.</option>
+                            <option value="3">3rd Sem.</option>
+                            <option value="4">4th Sem.</option>
+                            <option value="5">5th Sem.</option>
+                            <option value="6">6th Sem.</option>
+                            <option value="7">7th Sem.</option>
+                            <option value="8">8th Sem.</option>
+                        </select>
+                        <label>Semester</label>
+                    </div>
+                    <div class="input-field branch hide">
+                      <span class="icon ion-social-buffer prefix"></span>
+                      <input id="rg-branch" type="text">
+                      <label for="rg-branch">Branch</label>
+                    </div>
+                    <div class="input-field">
+                        <span class="icon ion-locked prefix"></span>
+                        <input id="rg-password" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,]).{4,}$" required>
+                        <span class="icon ion-eye pass-icon toggle-password" toggle="#rg-password"></span>
+                        <label for="rg-password">Password</label>
+                        <div class="passhint hide">
+                            <small>Password must be atleast 4 characters long and must include atleast one upper case letter, one lower case letter, one numeric digit, and one special symbol.</small>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <span class="icon ion-locked prefix"></span>
+                        <input id="rg-cnfmPass" type="password">
+                        <span class="icon ion-eye pass-icon toggle-password" toggle="#rg-cnfmPass"></span>
+                        <label for="rg-cnfmPass">Confirm Password</label>
+                    </div>
+            
+                    <div class="input-field center ld-ext-right">
+                        <button type="submit" style="width:50% !important" class="btn btn-primary register-btn">Register &nbsp;<div class="register ld ld-ring ld-spin hide"></div></button>
+                    </div>
+                </form>
+                <div class="input-field loglink center">
+                   <span>Already have an account?<a href="#"> Login</a></span>
+                </div>
+            </div>
+            <div class="col s2"></div>
+        </div>
+      </div>
+      
+      <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-storage.js"></script>
+      <script src="/js/firebase.js"></script>
+      <script src="/js/roleManager.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="/fontAwesome/js/all.js"></script>
+      <script src="/materialize/js/materialize.min.js"></script>
+      <script>
+        $(".toggle-password").click(function() {
+
+          $(this).toggleClass("ion-eye ion-eye-disabled");
+          var input = $($(this).attr("toggle"));
+          if (input.attr("type") == "password") {
+            input.attr("type", "text");
+          } else {
+            input.attr("type", "password");
+          }
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('select').formSelect();
+      
+          // for HTML5 "required" attribute
+          $("select[required]").css({
+            display: "block",
+            height: 0,
+            padding: 0,
+            width: 0
+          });
+        });
+      </script>
+      <script>
+          var password = document.getElementById("rg-password")
+            , confirm_password = document.getElementById("rg-cnfmPass");
+          
+          function validatePassword(){
+            if(password.value != confirm_password.value) {
+              confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+              confirm_password.setCustomValidity('');
+            }
+          }
+          
+          password.onchange = validatePassword;
+          confirm_password.onkeyup = validatePassword;
+      </script>
+      <script type="text/javascript">
+        var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if(isAndroid) {
+            document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
+        }
+      </script>
+      <script src="/js/userHandler.js"></script>
+      <script src="/js/auth.js"></script>
+      <script src="/js/app.js"></script>
+
+  </body>
+</html>
